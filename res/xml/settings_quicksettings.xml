@@ -41,6 +41,12 @@
         android:key="quck_settings"
         android:title="@string/quck_settings_title">
 
+    <com.nest.settings.preferences.SecureSettingSwitchPreference
+        android:key="status_bar_locked_on_secure_keyguard"
+        android:title="@string/block_on_secure_keyguard_title"
+        android:summary="@string/block_on_secure_keyguard_summary"
+        android:defaultValue="false"/>
+
     <Preference
         android:key="qs_rows_columns"
         android:fragment="com.nest.settings.fragments.QsRowsColumns"

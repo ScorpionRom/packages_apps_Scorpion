@@ -627,5 +627,9 @@
     <string name="recents_full_screen_clock_title">Show clock</string>
     <string name="recents_full_screen_clock_summary">Shows clock at the top while in immersive</string>
     <string name="recents_full_screen_date_title">Show date</string>
-    <string name="recents_full_screen_date_summary">Shows date at the top while in immersive</string> 
+    <string name="recents_full_screen_date_summary">Shows date at the top while in immersive</string>
+
+    <!-- Disable OS on lockscreen -->
+    <string name="block_on_secure_keyguard_title">Disable quick settings</string>
+    <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string> 
 </resources>
