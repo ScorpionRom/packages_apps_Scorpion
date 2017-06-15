@@ -165,6 +165,12 @@
         android:key="category_navbar_general"
         android:title="@string/sub_cat_advanced" >
 
+    <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="anbi_enabled_option"
+        android:title="@string/anbi_title"
+        android:summary="@string/anbi_summary"
+        android:defaultValue="false" />
+
         <com.nest.settings.preferences.SystemSettingSwitchPreference
             android:key="navigation_bar_menu_arrow_keys"
             android:title="@string/show_navbar_arrow_keys_title"
