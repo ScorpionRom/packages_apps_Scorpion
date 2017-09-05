@@ -22,7 +22,6 @@
     <Preference
         android:key="button_settings"
         android:title="@string/button_settings_title"
-        android:summary="@string/button_settings_title_summary"
         android:icon="@drawable/ic_settings_button"
         android:order="-70"
         android:fragment="com.android.settings.gzosp.dashboard.ButtonSettings"
