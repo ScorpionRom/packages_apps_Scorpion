@@ -56,4 +56,7 @@
 
     <!-- Power notification controls -->
     <string name="power_notification_title">Power notification controls</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
 </resources>
