@@ -144,6 +144,5 @@
             settings:controller="com.android.settings.gzosp.buttons.DoubleTapCameraPreferenceController" />
 
     </PreferenceCategory>
-
 </PreferenceScreen>
 
