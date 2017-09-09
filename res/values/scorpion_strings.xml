@@ -56,6 +56,7 @@
     <string name="carrier_label_title">Carrier Label</string>
     <string name="recents_hide_title">Hide Apps</string>
     <string name="lockscreen_ui_title" >LockScreen UI</string>
+    <string name="misc_buttons_title">Misc. Buttons</string>
     <string name="nav_bar_title">Navigation bar</string>
     <string name="powermenu_category" >Power Menu</string>
     <string name="quck_settings_title" >Quick Settings</string>
@@ -568,4 +569,8 @@
     <string name="show_carrier_keyguard">Lockscreen</string>
     <string name="show_carrier_statusbar">Status bar</string>
     <string name="show_carrier_enabled">Both</string>
+
+    <!-- Volume rocker music control -->
+    <string name="volume_rocker_music_controls_title">Playback control</string>
+    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
 </resources>

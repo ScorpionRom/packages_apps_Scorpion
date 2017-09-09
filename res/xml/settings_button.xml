@@ -52,12 +52,24 @@
 
     </PreferenceCategory>
 
-    <Preference
+    <PreferenceScreen
         android:key="button_brightness"
         android:title="@string/button_backlight_title"
         android:summary="@string/button_backlight_summary"
         android:persistent="false"
         android:fragment="com.nest.settings.moresettings.ButtonBrightness" />
+
+    <PreferenceCategory
+        android:key="misc_buttons"
+        android:title="@string/misc_buttons_title">
+
+    <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="volume_button_music_control"
+        android:summary="@string/volume_rocker_music_controls_summary"
+        android:title="@string/volume_rocker_music_controls_title"
+        android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="home_key"
