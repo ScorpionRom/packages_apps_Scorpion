@@ -53,6 +53,7 @@
 
     <!-- Sub categories -->
     <string name="brightness_slider_title" >Brightness Slider</string>
+    <string name="recents_hide_title">Hide Apps</string>
     <string name="lockscreen_ui_title" >LockScreen UI</string>
     <string name="nav_bar_title">Navigation bar</string>
     <string name="powermenu_category" >Power Menu</string>
@@ -550,4 +551,9 @@
     <string name="lock_clock_font_notoserif_italic">NotoSerif Italic</string>
     <string name="lock_clock_font_notoserif_bold">NotoSerif Bold</string>
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Hide apps from recents</string>
+    <string name="hide_from_recents_add_app">Add App</string>
+    <string name="hide_apps_from_recents_summary">Select certian apps to hide in recents</string>
 </resources>
