@@ -53,12 +53,12 @@
         android:fragment="com.nest.settings.fragments.LockScreenSettings" />
 	
     <!-- Misc -->
-    <!-- <PreferenceScreen
+    <PreferenceScreen
         android:key="misc_category"
         android:title="@string/misc_title"
         android:summary="@string/misc_summary"
         android:icon="@drawable/ic_settings_misc" 
-        android:fragment="com.nest.settings.fragments.MiscSettings" /> -->
+        android:fragment="com.nest.settings.fragments.MiscSettings" />
 
     <!-- Navigation Bar -->
     <!-- <PreferenceScreen
