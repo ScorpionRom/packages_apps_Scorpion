@@ -26,7 +26,19 @@
         android:title="@string/heads_up_notifications"
         android:fragment="com.nest.settings.fragments.HeadsUpSettings" />
 
-    </PreferenceCategory>   
+    </PreferenceCategory> 
+  
+    <PreferenceCategory
+        android:key="battery_light_customization"
+        android:title="@string/battery_notification_settings" >
+
+    <Preference
+        android:key="charging_light"
+        android:fragment="com.nest.settings.fragments.BatteryLightSettings"
+        android:title="@string/battery_light_settings" />
+  
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >

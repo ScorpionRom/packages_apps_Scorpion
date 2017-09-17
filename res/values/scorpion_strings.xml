@@ -389,4 +389,16 @@
     <string name="battery_bar_gradient_color_summary">Use gradient color as a scale for the battery level</string>
     <string name="battery_bar_high_color">High level color"</string>
     <string name="battery_bar_low_color">Low level color"</string>
+
+    <!-- Battery light -->
+    <string name="battery_notification_settings">Battery light Customization</string>
+    <string name="battery_light_settings">Battery charging light</string>
+    <string name="battery_light_enable">Enable</string>
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost full battery</string>
+    <string name="battery_light_reallyfull_color">Full (100) battery</string>
 </resources>
