@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 Invictrix ROM
+<!-- Copyright (C) 2018 Scorpion
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -28,5 +28,11 @@
         android:key="wake_when_plugged_or_unplugged"
         android:title="@string/wakeup_when_plugged_unplugged_title"
         android:summary="@string/wakeup_when_plugged_unplugged_summary"
+        android:defaultValue="true" />
+
+    <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="vibration_on_charge_state_changed"
+        android:title="@string/vibration_on_charge_state_changed_title"
+        android:summary="@string/vibration_on_charge_state_changed_summary"
         android:defaultValue="true" />
 </PreferenceScreen>
