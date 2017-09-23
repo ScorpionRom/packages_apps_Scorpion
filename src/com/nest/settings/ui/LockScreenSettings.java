@@ -19,22 +19,53 @@ package com.nest.settings.ui;
 
 import android.os.Bundle;
 
+import android.content.Context;
+import android.content.ContentResolver;
+import android.net.Uri;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.hardware.fingerprint.FingerprintManager;
+import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
+
+import android.provider.Settings;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 public class LockScreenSettings extends ScorpionSettingsFragment implements OnPreferenceChangeListener {
+
+    private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore"; 
+
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFpKeystore;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        title = getResources().getString(R.string.lights_settings_title);
-        addPreferencesFromResource(R.xml.settings_lights);
-    }
+        title = getResources().getString(R.string.lockscreen_settings_title);
+        addPreferencesFromResource(R.xml.settings_lockscreen);
+
+       mFpKeystore = (SwitchPreference) findPreference(FP_UNLOCK_KEYSTORE);
+        mFpKeystore.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1));
+        mFpKeystore.setOnPreferenceChangeListener(this);
+         }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+       ContentResolver resolver = getActivity().getContentResolver();
+       if (preference == mFpKeystore) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FP_UNLOCK_KEYSTORE, value ? 1 : 0);
+   return true;
+
     }
+   return false;
+  }
 }
