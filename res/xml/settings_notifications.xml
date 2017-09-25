@@ -19,6 +19,12 @@
 	android:title="@string/notifications_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Heads up -->
+    <Preference
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:fragment="com.nest.settings.ui.HeadsUpSettings" />
+
        <PreferenceCategory
             android:title="@string/light_settings_header" >
 
