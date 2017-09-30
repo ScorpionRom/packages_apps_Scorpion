@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Invictrix ROM
+ * Copyright (C) 2018 Scorpion
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,8 +29,8 @@ public class LockScreenSettings extends ScorpionSettingsFragment implements OnPr
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        title = getResources().getString(R.string.lights_settings_title);
-        addPreferencesFromResource(R.xml.settings_lights);
+        title = getResources().getString(R.string.lockscreen_settings_title);
+        addPreferencesFromResource(R.xml.settings_lockscreen);
     }
 
     @Override

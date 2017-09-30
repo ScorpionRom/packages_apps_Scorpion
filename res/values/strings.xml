@@ -19,7 +19,7 @@
 
         <string name="buttons_settings_title">Buttons</string>
         <string name="lights_settings_title">Lights</string>
-        <string name="nest_lockscreen_settings_title">Lock Screen</string>
+        <string name="lockscreen_settings_title">Lock Screen</string>
         <string name="misc_settings_title">Miscellaneous</string>
         <string name="navigationbar_settings_title">Navigation Bar</string>
         <string name="qs_settings_title">Quick Settings</string>
@@ -35,4 +35,8 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Show charging current, voltage and battery temperature on lockscreen while charging</string>
 </resources>
