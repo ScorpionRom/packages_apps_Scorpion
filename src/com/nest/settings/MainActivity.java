@@ -20,6 +20,7 @@ import android.os.Bundle;
 
 import com.android.settings.R;
 
+import com.nest.settings.preferences.Utils;
 import com.nest.settings.ui.ScorpionSettingsFragment;
 
 public class MainActivity extends ScorpionSettingsFragment {
@@ -27,8 +28,17 @@ public class MainActivity extends ScorpionSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        title = getResources().getString(R.string.main_settings_title);
+
+        final String KEY_DEVICE_PART = "device_part";
+        final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
+
         addPreferencesFromResource(R.xml.settings_main);
+
+        // DeviceParts
+        if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
+        }
+
     }
 
 }
