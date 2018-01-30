@@ -277,4 +277,8 @@
     <!-- Swap navigation keys -->
     <string name="swap_navigation_keys_title">Swap keys</string>
     <string name="swap_navigation_keys_title_summary">Swap back and recents hardware keys</string>
+
+    <!-- Face auto Unlock -->
+    <string name="face_auto_unlock_title">Face auto unlock</string>
+    <string name="face_auto_unlock_summary">Dismiss lockscreen after face unlocking</string>
 </resources>
