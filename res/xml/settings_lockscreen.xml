@@ -17,4 +17,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+	<Preference android:key="lockscreen_shortcuts"
+		android:title="@string/lockscreen_shortcuts_title">
+
+		<intent android:targetPackage="com.android.systemui"
+			android:targetClass="com.android.systemui.tuner.LockscreenTunerActivity" />
+	</Preference>
+
 </PreferenceScreen>

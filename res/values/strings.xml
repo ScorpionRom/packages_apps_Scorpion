@@ -26,4 +26,7 @@
         <string name="recents_settings_title">Recents</string>
         <string name="statusbar_settings_title">Status Bar</string>
 
+	<string name="lockscreen_shortcuts_title">Lock Screen Shortcuts</string>
+	<string name="navbar_tuner_title">Navigation Bar Tuner</string>
+	<string name="statusbar_icons_title">Status Bar Icons</string>
 </resources>
