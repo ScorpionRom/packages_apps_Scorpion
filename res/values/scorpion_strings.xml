@@ -22,6 +22,7 @@
 
     <!-- Categories -->
     <string name="settings_title">Main Settings</string>
+    <string name="ambient_title">Ambient</string>
     <string name="button_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
     <string name="lockscreen_title">Lock Screen</string>
@@ -36,6 +37,7 @@
     <string name="volume_title">Volume rockers</string>
 
     <!-- Category Summaries -->
+    <string name="ambient_summary">Enable ambient display options</string>
     <string name="button_summary">Buttons Options</string>
     <string name="gestures_summary">Gestures Menu</string>
     <string name="lockscreen_summary">Lock Screen Customizations</string>
@@ -429,4 +431,9 @@
     <string name="lockscreen_weather_show_city_summary">Show name of current city on left of image</string>
     <string name="lockscreen_weather_show_temp_title">Show temperature</string>
     <string name="lockscreen_weather_show_temp_summary">Show current city temperature on right of image</string>
+
+    <!-- Ambient battery -->
+    <string name="ambient_battery">Battery</string>
+    <string name="ambient_battery_percent_title">Battery level on bottom</string>
+    <string name="ambient_battery_percent_summary">Enable to show battery percent while dozing</string>
 </resources>
