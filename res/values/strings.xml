@@ -16,21 +16,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-        <!-- Main Title -->
-        <string name="main_settings_title">Scorpion Nest</string>
+    <!-- Main Title -->
+    <string name="main_settings_title">Scorpion Nest</string>
 
-        <!-- General Categories -->
-        <string name="buttons_settings_title">Buttons</string>
-        <string name="lights_settings_title">Lights</string>
-        <string name="lockscreen_settings_title">Lock Screen</string>
-        <string name="misc_settings_title">Miscellaneous</string>
-        <string name="navigation_title">Navigation</string>
-        <string name="notifications_title">Notification</string>
-        <string name="qs_settings_title">Quick Settings</string>
-        <string name="recents_settings_title">Recents</string>
-        <string name="statusbar_settings_title">Status Bar</string>     
-        <string name="gesture_preference">AOSP gestures</string>    
-        <string name="gesture_title">Gestures</string>
+    <!-- General Categories -->
+    <string name="buttons_settings_title">Buttons</string>
+    <string name="lights_settings_title">Lights</string>
+    <string name="lockscreen_settings_title">Lock Screen</string>
+    <string name="misc_settings_title">Miscellaneous</string>
+    <string name="navigation_title">Navigation</string>
+    <string name="notifications_title">Notification</string>
+    <string name="qs_settings_title">Quick Settings</string>
+    <string name="recents_settings_title">Recents</string>
+    <string name="statusbar_settings_title">Status Bar</string>     
+    <string name="gesture_preference">AOSP gestures</string>    
+    <string name="gesture_title">Gestures</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -159,4 +159,8 @@
     <!-- Fingerprint unlock keystore -->  
     <string name="fp_unlock_keystore_title">Fingerprint unlock</string>  
     <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot without PIN/Password/Pattern\nNote: at your own risk!</string>
+
+    <!-- Toast icon -->
+    <string name="toast_icon_title">Toast icon</string>
+    <string name="toast_icon_summary">Display icon of activity that generates toast message</string>
 </resources>
