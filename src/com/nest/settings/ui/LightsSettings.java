@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.armory.settings.ui;
+package com.nest.settings.ui;
 
 import android.os.Bundle;
 
@@ -23,7 +23,7 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.settings.R;
 
-public class LightsSettings extends InvictrixSettingsFragment implements OnPreferenceChangeListener {
+public class LightsSettings extends ScorpionSettingsFragment implements OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -18,37 +18,38 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
 	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.ButtonsSettings"
+		android:fragment="com.nest.settings.ui.ButtonsSettings"
 		android:key="statusbar_settings"
 		android:title="@string/buttons_settings_title"/>
 
-	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.LightsSettings"
-		android:key="statusbar_settings"
+<!--	<PreferenceScreen
+		android:fragment="com.nest.settings.ui.LightsSettings"
+		android:key="lights_settings"
 		android:title="@string/lights_settings_title"/>
+-->
 
 	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.LockscreenSettings"
+		android:fragment="com.nest.settings.ui.LockScreenSettings"
 		android:key="lockscreen_settings"
-		android:title="@string/lockscreen_settings_title"/>
+		android:title="@string/nest_lockscreen_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.MiscSettings"
+		android:fragment="com.nest.settings.ui.MiscSettings"
 		android:key="misc_settings"
 		android:title="@string/misc_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.NavigationBarSettings"
+		android:fragment="com.nest.settings.ui.NavigationBarSettings"
 		android:key="navigationbar_settings"
 		android:title="@string/navigationbar_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.RecentsSettings"
+		android:fragment="com.nest.settings.ui.RecentsSettings"
 		android:key="recents_settings"
 		android:title="@string/recents_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.armory.settings.ui.StatusBarSettings"
+		android:fragment="com.nest.settings.ui.StatusBarSettings"
 		android:key="statusbar_settings"
 		android:title="@string/statusbar_settings_title"/>
 

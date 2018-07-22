@@ -14,21 +14,22 @@
  * limitations under the License.
  */
 
-package com.armory.settings;
+package com.nest.settings.ui;
 
-import android.os.Bundle;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
-import com.armory.settings.ui.InvictrixSettingsFragment;
+public class ScorpionSettingsFragment extends SettingsPreferenceFragment {
 
-public class MainActivity extends InvictrixSettingsFragment {
+    protected String title = "";
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        title = getResources().getString(R.string.main_settings_title);
-        addPreferencesFromResource(R.xml.settings_main);
+    public String getTitle() {
+        return title;
     }
 
+    @Override
+    public int getMetricsCategory() {
+        return MetricsEvent.SCORPION;
+    }
 }

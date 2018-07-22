@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2018 Invictrix ROM
+     Copyright (C) 2018 Scorpion ROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,13 +15,15 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-        <string name="main_settings_title">Armory</string>
+        <string name="main_settings_title">Nest</string>
 
         <string name="buttons_settings_title">Buttons</string>
         <string name="lights_settings_title">Lights</string>
-        <string name="lockscreen_settings_title">Lockscreen</string>
+        <string name="nest_lockscreen_settings_title">Lock Screen</string>
         <string name="misc_settings_title">Miscellaneous</string>
         <string name="navigationbar_settings_title">Navigation Bar</string>
+        <string name="qs_settings_title">Quick Settings</string>
         <string name="recents_settings_title">Recents</string>
         <string name="statusbar_settings_title">Status Bar</string>
+
 </resources>

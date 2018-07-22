@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.armory.settings.ui;
+package com.nest.settings.ui;
 
 import android.os.Bundle;
 
@@ -23,18 +23,19 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.settings.R;
 
-public class MiscSettings extends InvictrixSettingsFragment implements OnPreferenceChangeListener {
+public class StatusBarSettings extends ScorpionSettingsFragment implements OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        title = getResources().getString(R.string.misc_settings_title);
-        addPreferencesFromResource(R.xml.settings_misc);
+        title = getResources().getString(R.string.statusbar_settings_title);
+        addPreferencesFromResource(R.xml.settings_statusbar);
+
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+    return true;
     }
 
 }
