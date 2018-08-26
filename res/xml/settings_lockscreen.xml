@@ -25,21 +25,27 @@
          android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
 
-    <SwitchPreference
-        android:key="fingerprint_success_vib"
-        android:title="@string/fprint_sucess_vib_title"
-        android:summary="@string/fprint_sucess_vib_summary"
-        android:persistent="false" />
-
     <com.nest.settings.preferences.SecureSettingSwitchPreference
         android:key="face_auto_unlock"
         android:title="@string/face_auto_unlock_title"
         android:summary="@string/face_auto_unlock_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" />    
+
+    <com.nest.settings.preferences.SystemSettingSwitchPreference  
+        android:key="fp_unlock_keystore" 
+        android:title="@string/fp_unlock_keystore_title" 
+        android:summary="@string/fp_unlock_keystore_summary" 
+        android:defaultValue="false" /> 
 
     <com.nest.settings.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
+
+    <SwitchPreference
+        android:key="fingerprint_success_vib"
+        android:title="@string/fprint_sucess_vib_title"
+        android:summary="@string/fprint_sucess_vib_summary"
+        android:persistent="false" />
 </PreferenceScreen>
