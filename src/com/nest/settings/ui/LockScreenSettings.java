@@ -30,11 +30,17 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+
+import java.util.List;
+import java.util.ArrayList;
 
 import com.nest.settings.preferences.Utils;
 
@@ -79,6 +85,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         }
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        return super.onPreferenceTreeClick(preference);
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mFingerprintVib) {
@@ -98,5 +109,26 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SCORPION;
-    }
+
+    }    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                     SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.settings_lockscreen;
+                    result.add(sir);
+
+                     return result;
+                }
+
+                 @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    ArrayList<String> result = new ArrayList<String>();
+                    return result;
+                }
+            };
 }

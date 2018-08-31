@@ -75,4 +75,9 @@
             android:icon="@drawable/ic_settings_statusbar"
             android:title="@string/statusbar_settings_title"/>
 
+       <Preference
+            android:key="omnijaws_settings"
+            android:icon="@drawable/ic_qs_weather_default_on"
+            android:title="@string/weather_title"
+            android:fragment="com.nest.settings.moresettings.OmniJawsSettings" />
 </PreferenceScreen>
