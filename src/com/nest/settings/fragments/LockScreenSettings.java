@@ -35,12 +35,19 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
+import com.nest.settings.preferences.Utils;
+
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_FACE_AUTO_UNLOCK = "face_auto_unlock";
+    private static final String KEY_FACE_UNLOCK_PACKAGE = "com.android.facelock";
+
+    private SwitchPreference mFaceUnlock;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -51,11 +58,25 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
 
+        mFaceUnlock = (SwitchPreference) findPreference(KEY_FACE_AUTO_UNLOCK);
+        if (!Utils.isPackageInstalled(getActivity(), KEY_FACE_UNLOCK_PACKAGE)){
+            prefScreen.removePreference(mFaceUnlock);
+        } else {
+            mFaceUnlock.setChecked((Settings.Secure.getInt(getContext().getContentResolver(),
+                    Settings.System.FACE_AUTO_UNLOCK, 0) == 1));
+            mFaceUnlock.setOnPreferenceChangeListener(this);
+        }
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-
+            if (preference == mFaceUnlock) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FACE_AUTO_UNLOCK, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
