@@ -23,7 +23,7 @@ import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class NotificationSettings extends SettingsPreferenceFragment {
+public class NotificationsSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {

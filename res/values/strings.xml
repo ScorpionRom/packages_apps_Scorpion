@@ -120,4 +120,19 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+
+    <!-- Battery light -->
+    <string name="light_settings_header">Notif. Led Settings</string>
+    <string name="battery_light_settings">Battery Charging Light</string>
+    <string name="battery_light_summary">Customization for Battery Light</string>
+    <string name="battery_light_enable">Enable</string>
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost full battery</string>
+    <string name="battery_light_reallyfull_color">Full (100) battery</string>
+    <string name="notification_light_settings">Notifications Light</string>
+    <string name="notification_light_summary">Notif. light customization</string>
 </resources>
