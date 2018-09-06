@@ -135,4 +135,10 @@
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
     <string name="notification_light_settings">Notifications Light</string>
     <string name="notification_light_summary">Notif. light customization</string>
+
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">In-call vibration options</string>
+    <string name="incall_vibrate_connect_title">Vibrate on connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
 </resources>
