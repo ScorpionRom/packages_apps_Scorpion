@@ -25,6 +25,12 @@
         android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
+    <Preference
+         android:key="batterybar_settings"
+         android:title="@string/battery_bar_title"
+         android:summary="@string/battery_bar_summary"
+         android:fragment="com.nest.settings.fragments.BatterybarSettings" />
+
     <com.nest.settings.preferences.SystemSettingSwitchPreference
          android:key="status_bar_brightness_control"
          android:title="@string/status_bar_toggle_brightness"
