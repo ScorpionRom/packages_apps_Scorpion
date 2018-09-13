@@ -41,7 +41,7 @@
 	<PreferenceScreen
 		android:fragment="com.nest.settings.ui.NavigationBarSettings"
 		android:key="navigationbar_settings"
-		android:title="@string/navigationbar_settings_title"/>
+		android:title="@string/navigation_title"/>
 
 	<PreferenceScreen
 		android:fragment="com.nest.settings.ui.RecentsSettings"

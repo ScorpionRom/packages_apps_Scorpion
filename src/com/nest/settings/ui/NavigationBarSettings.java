@@ -28,7 +28,7 @@ public class NavigationBarSettings extends ScorpionSettingsFragment implements O
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        title = getResources().getString(R.string.navigationbar_settings_title);
+        title = getResources().getString(R.string.navigation_title);
         addPreferencesFromResource(R.xml.settings_navigationbar);
     }
 

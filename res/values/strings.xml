@@ -21,7 +21,7 @@
         <string name="lights_settings_title">Lights</string>
         <string name="lockscreen_settings_title">Lock Screen</string>
         <string name="misc_settings_title">Miscellaneous</string>
-        <string name="navigationbar_settings_title">Navigation Bar</string>
+        <string name="navigation_title">Navigation</string>
         <string name="qs_settings_title">Quick Settings</string>
         <string name="recents_settings_title">Recents</string>
         <string name="statusbar_settings_title">Status Bar</string>
@@ -48,6 +48,8 @@
 
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
+
+    <string name="navigation_summary">Force on screen navbar and customize buttons</string>
 
     <!-- Face auto Unlock -->
     <string name="face_auto_unlock_title">Face auto unlock</string>
