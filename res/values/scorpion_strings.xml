@@ -65,6 +65,19 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- AOSP Gestures -->
+    <string name="statusbar_settings_title">Status Bar</string>     
+    <string name="gesture_preference">AOSP gestures</string>
+
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar items</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
+
+    <!-- Navbar tuner -->
+    <string name="navbar_tuner_title">Navbar buttons</string>
+
     <!-- SeekBar -->
     <string name="seekbar_no_default_value">No default value set</string>
     <string name="seekbar_default_value_set">Value set to default of <xliff:g id="number">%d</xliff:g></string>
