@@ -34,7 +34,7 @@ import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-import com.dirtyunicorns.support.preferences.SystemSettingSwitchPreference;
+import com.nest.settings.preferences.SystemSettingSwitchPreference;
 
 public class NavigationOptions extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {

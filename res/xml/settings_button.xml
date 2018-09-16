@@ -23,6 +23,12 @@
         android:title="@string/navigation_bar_title"
         android:summary="@string/navigation_bar_title_summary" />
 
+    <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="swap_navigation_keys"
+        android:title="@string/swap_navigation_keys_title"
+        android:summary="@string/swap_navigation_keys_title_summary"
+        android:defaultValue="false" />
+
     <Preference
         android:key="layout_settings"
         android:title="@string/systemui_tuner_navbar_title"

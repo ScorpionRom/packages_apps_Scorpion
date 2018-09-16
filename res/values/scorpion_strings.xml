@@ -275,5 +275,10 @@
     <string name="action_screen_off">Screen off</string>
     <string name="action_notifications">Notifications</string>
     <string name="action_power_menu">Power menu</string>
+    <string name="action_screenshot">Screenshot</string>
+    <string name="action_qs_panel">QS panel</string>
 
+    <!-- Swap navigation keys -->
+    <string name="swap_navigation_keys_title">Swap keys</string>
+    <string name="swap_navigation_keys_title_summary">Swap back and recents hardware keys</string>
 </resources>
