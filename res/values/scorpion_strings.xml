@@ -15,7 +15,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Scorpion Nest -->
+    <!-- App Title -->
+    <string name="scorpion_nest_title">Scorpion Nest</string>
+    <string name="scorpion_nest_summary">Dare to enter the nest</string>
+
     <!-- Categories -->
+    <string name="settings_title">Main Settings</string>
     <string name="button_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
     <string name="lockscreen_title">Lock Screen</string>
