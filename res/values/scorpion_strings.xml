@@ -443,4 +443,11 @@
     <string name="ambient_play">Music</string>
     <string name="force_ambient_for_media_title">Music ticker</string>
     <string name="force_ambient_for_media_summary">Display the playing music track info within Ambient display</string>
+
+    <!-- Recents style -->
+    <string name="stock_recents_title" >Stock recents</string>
+    <string name="recents_component_type_title">Recents style</string>
+    <string name="recents_pie">Pie</string>
+    <string name="recents_oreo">Oreo</string>
+
 </resources>
