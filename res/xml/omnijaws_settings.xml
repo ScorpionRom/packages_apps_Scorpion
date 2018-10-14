@@ -25,18 +25,32 @@
     <intent android:action="android.intent.action.MAIN"
         android:targetPackage="org.omnirom.omnijaws"
         android:targetClass="org.omnirom.omnijaws.SettingsActivityService" />
-    </PreferenceScreen>
+    </PreferenceScreen> 
 
     <ListPreference
         android:key="weather_icon_pack"
         android:title="@string/weather_icon_pack_title"
-        android:persistent="false" />    
+        android:persistent="false" />   
 
     <com.nest.settings.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_weather_enabled"
         android:title="@string/lockscreen_weather_title"
         android:summary="@string/lockscreen_weather_summary"
         android:defaultValue="false" />
+
+     <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_weather_show_city"
+        android:title="@string/lockscreen_weather_show_city_title"
+        android:summary="@string/lockscreen_weather_show_city_summary"
+        android:dependency="lockscreen_weather_enabled"
+        android:defaultValue="false" />
+		
+     <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_weather_show_temp"
+        android:title="@string/lockscreen_weather_show_temp_title"
+        android:summary="@string/lockscreen_weather_show_temp_summary"
+        android:dependency="lockscreen_weather_enabled"
+        android:defaultValue="true" />
 
      <Preference
         android:icon="@drawable/ic_info_outline_24dp"
