@@ -16,7 +16,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	android:title="@string/notifications_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+   
+    <PreferenceCategory
+        android:key="heads_up_options"
+        android:title="@string/heads_up_category" >
+    <!-- Heads up -->
+    <Preference
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:fragment="com.nest.settings.fragments.HeadsUpSettings" />
 
+    </PreferenceCategory>   
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
@@ -35,11 +45,11 @@
             android:key="vibrate_on_disconnect"
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="true" />
-    </PreferenceCategory>
-    
-    <!-- Heads up -->
-    <Preference
-        android:key="heads_up_notifications"
-        android:title="@string/heads_up_notifications"
-        android:fragment="com.nest.settings.fragments.HeadsUpSettings" />
+    </PreferenceCategory> 
+
+        <com.nest.settings.preferences.SystemSettingSwitchPreference
+            android:key="toast_icon"
+            android:title="@string/toast_icon_title"
+            android:summary="@string/toast_icon_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>
