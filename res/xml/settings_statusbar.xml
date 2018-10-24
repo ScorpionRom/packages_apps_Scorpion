@@ -31,6 +31,13 @@
         android:summary="@string/clock_options_summary"
         android:fragment="com.nest.settings.ui.ClockOptions" />
 
+    <!-- VoLTE Icon -->
+        <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="volte_icon"
+        android:title="@string/volte_icon_title"
+        android:summary="@string/volte_icon_summary"
+        android:defaultValue="false"/>
+
     <com.nest.settings.preferences.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_show_brightness_title"
