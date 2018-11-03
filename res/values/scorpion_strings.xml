@@ -74,4 +74,11 @@
     <string name="battery_percent_hidden">Hidden</string>
     <string name="battery_percent_outside">Outside</string>
     <string name="battery_percent_inside">Inside</string>
+
+    <!-- Power Menu -->
+    <string name="powermenu_reboot_title">Restart</string>
+    <string name="powermenu_advanced_restart_title">Advanced restart</string>
+    <string name="powermenu_advanced_restart_summary">Enables the advanced restart menu for other restarting options</string>
+    <string name="powermenu_lockdown_title">Lockdown</string>
+    <string name="powermenu_screenshot_title">Screenshot</string>
 </resources>
