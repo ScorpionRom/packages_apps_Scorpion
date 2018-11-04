@@ -28,11 +28,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
-import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.android.settings.SettingsPreferenceFragment;
@@ -40,18 +40,21 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 
-public class NavbarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class NavbarSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+    private static final String KEY_PULSE_SETTINGS = "pulse_settings";
+
+    private PreferenceScreen mPulseSettings;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.settings_navigation);
 
+        mPulseSettings = (PreferenceScreen) findPreference(KEY_PULSE_SETTINGS);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
         return false;
     }
 
