@@ -23,4 +23,9 @@
         android:fragment="com.nest.settings.fragments.QsRowsColumns"
         android:title="@string/qs_rows_columns_title"/>
 
+    <com.nest.settings.preferences.SystemSettingSwitchPreference
+        android:key="qs_tile_title_visibility"
+        android:title="@string/qs_tile_title_visibility_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
