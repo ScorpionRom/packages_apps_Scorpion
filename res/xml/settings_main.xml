@@ -23,6 +23,16 @@
             android:icon="@drawable/ic_settings_button"  
 	    android:title="@string/buttons_settings_title"/>
 
+    <!-- Button Settings -->
+    <Preference
+        android:key="button_settings"
+        android:title="@string/button_settings_title"
+        android:summary="@string/button_settings_title_summary"
+        android:icon="@drawable/ic_settings_button"
+        android:order="-70"
+        android:fragment="com.android.settings.gzosp.dashboard.ButtonSettings"
+        settings:controller="com.android.settings.gzosp.dashboard.ButtonSettingsPreferenceController"/>
+
 <!--	<PreferenceScreen
 		android:fragment="com.nest.settings.ui.LightsSettings"
 		android:key="lights_settings"
