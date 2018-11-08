@@ -18,9 +18,10 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
 	<PreferenceScreen
-		android:fragment="com.nest.settings.ui.ButtonsSettings"
-		android:key="statusbar_settings"
-		android:title="@string/buttons_settings_title"/>
+	    android:fragment="com.nest.settings.ui.ButtonsSettings"
+	    android:key="statusbar_settings"
+            android:icon="@drawable/ic_settings_button"  
+	    android:title="@string/buttons_settings_title"/>
 
 <!--	<PreferenceScreen
 		android:fragment="com.nest.settings.ui.LightsSettings"
@@ -28,35 +29,41 @@
 		android:title="@string/lights_settings_title"/>
 -->
 
-    <Preference
-        android:key="gesture_settings"
-        android:title="@string/gesture_preference"
-        android:fragment="com.android.settings.gestures.GestureSettings"
-        settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+        <Preference
+            android:key="gesture_settings"
+            android:title="@string/gesture_preference"
+            android:icon="@drawable/ic_settings_gesture"
+            android:fragment="com.android.settings.gestures.GestureSettings"
+            settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
 	<PreferenceScreen
-		android:fragment="com.nest.settings.ui.LockScreenSettings"
-		android:key="lockscreen_settings"
-		android:title="@string/lockscreen_settings_title"/>
+	    android:fragment="com.nest.settings.ui.LockScreenSettings"
+	    android:key="lockscreen_settings"
+            android:icon="@drawable/ic_settings_lockscreen"
+	    android:title="@string/lockscreen_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.nest.settings.ui.MiscSettings"
-		android:key="misc_settings"
-		android:title="@string/misc_settings_title"/>
+	    android:fragment="com.nest.settings.ui.MiscSettings"
+	    android:key="misc_settings"
+            android:icon="@drawable/ic_settings_misc"
+	    android:title="@string/misc_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.nest.settings.ui.NavigationBarSettings"
-		android:key="navigationbar_settings"
-		android:title="@string/navigation_title"/>
+	    android:fragment="com.nest.settings.ui.NavigationBarSettings"
+	    android:key="navigationbar_settings"
+            android:icon="@drawable/ic_settings_navigation" 
+	    android:title="@string/navigation_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.nest.settings.ui.RecentsSettings"
-		android:key="recents_settings"
-		android:title="@string/recents_settings_title"/>
+	    android:fragment="com.nest.settings.ui.RecentsSettings"
+	    android:key="recents_settings"
+            android:icon="@drawable/ic_settings_recents"
+	    android:title="@string/recents_settings_title"/>
 
 	<PreferenceScreen
-		android:fragment="com.nest.settings.ui.StatusBarSettings"
-		android:key="statusbar_settings"
-		android:title="@string/statusbar_settings_title"/>
+            android:fragment="com.nest.settings.ui.StatusBarSettings"
+	    android:key="statusbar_settings"
+            android:icon="@drawable/ic_settings_statusbar"
+            android:title="@string/statusbar_settings_title"/>
 
 </PreferenceScreen>
