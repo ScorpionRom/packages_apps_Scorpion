@@ -95,4 +95,8 @@
     <string name="powermenu_advanced_restart_summary">Enables the advanced restart menu for other restarting options</string>
     <string name="powermenu_lockdown_title">Lockdown</string>
     <string name="powermenu_screenshot_title">Screenshot</string>
+
+    <!-- Lockscreen Media art -->
+    <string name="media_art_title">Full-screen media cover art</string>
+    <string name="media_art_summary">Set full-screen media cover art on the lockscreen</string>
 </resources>
