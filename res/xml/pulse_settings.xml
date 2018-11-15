@@ -26,6 +26,7 @@
         android:fragment="com.nest.settings.moresettings.PulseBlacklist"
         android:title="@string/pulse_blacklist_title"
         android:summary="@string/pulse_blacklist_summary"
+        android:dependency="eos_fling_show_pulse"
         android:persistent="false" />
 
     <ListPreference
