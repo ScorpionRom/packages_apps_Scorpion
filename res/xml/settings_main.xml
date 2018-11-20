@@ -15,13 +15,8 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-
-	<PreferenceScreen
-	    android:fragment="com.nest.settings.ui.ButtonsSettings"
-	    android:key="statusbar_settings"
-            android:icon="@drawable/ic_settings_button"  
-	    android:title="@string/buttons_settings_title"/>
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/main_settings_title">
 
     <!-- Button Settings -->
     <Preference
