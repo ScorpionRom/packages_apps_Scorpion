@@ -25,6 +25,12 @@
         android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
+    <PreferenceScreen
+        android:key="clock_options_category"
+        android:title="@string/clock_options_title"
+        android:summary="@string/clock_options_summary"
+        android:fragment="com.nest.settings.ui.ClockOptions" />
+
     <com.nest.settings.preferences.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_show_brightness_title"
