@@ -15,8 +15,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+        <!-- Main Title -->
         <string name="main_settings_title">Scorpion Nest</string>
 
+        <!-- General Categories -->
         <string name="buttons_settings_title">Buttons</string>
         <string name="lights_settings_title">Lights</string>
         <string name="lockscreen_settings_title">Lock Screen</string>
