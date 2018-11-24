@@ -33,12 +33,11 @@
 		android:title="@string/lights_settings_title"/>
 -->
 
-        <Preference
-            android:key="gesture_settings"
-            android:title="@string/gesture_preference"
+	<PreferenceScreen
+	    android:fragment="com.nest.settings.ui.GestureSettings"
+	    android:key="gesture_settings"
             android:icon="@drawable/ic_settings_gesture"
-            android:fragment="com.android.settings.gestures.GestureSettings"
-            settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+	    android:title="@string/gesture_title"/>
 
 	<PreferenceScreen
 	    android:fragment="com.nest.settings.ui.LockScreenSettings"
