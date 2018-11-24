@@ -18,6 +18,18 @@
     android:title="@string/powermenu_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="powermenu_advanced_category"
+        android:title="@string/sub_cat_advanced">
+
+        <com.nest.settings.preferences.SecureSettingSwitchPreference
+            android:key="secured_lock_power_menu"
+            android:title="@string/powermenu_lockscreen_title"
+            android:summary="@string/powermenu_lockscreen_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
     <com.nest.settings.preferences.SecureSettingSwitchPreference
         android:key="reboot_in_power_menu"
         android:title="@string/powermenu_reboot_title"
@@ -38,4 +50,5 @@
         android:key="screenshot_in_power_menu"
         android:title="@string/powermenu_screenshot_title"
         android:defaultValue="true" />
+
 </PreferenceScreen>
