@@ -773,7 +773,10 @@
     <string name="mt_share">Share</string> 
     <string name="mt_reset">Reset</string> 
     <string name="time_in_state_title">Time in state</string> 
-    <string name="time_in_state_summary">Show CPU frequency statistics</string> 
+    <string name="time_in_state_summary">Show CPU frequency statistics</string>
+
+    <!-- DT2S on lockscreen -->
+    <string name="double_tap_sleep_lockscreen">Double tap to sleep on lockscreen</string> 
 
     <!-- Smart Pixels -->
     <string name="smart_pixels_title">Smart Pixels</string>
