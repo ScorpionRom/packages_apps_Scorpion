@@ -43,7 +43,7 @@
 	    android:fragment="com.nest.settings.ui.LockScreenSettings"
 	    android:key="lockscreen_settings"
             android:icon="@drawable/ic_settings_lockscreen"
-	    android:title="@string/lockscreen_settings_title"/>
+	    android:title="@string/lockscreen_title"/>
 
 	<PreferenceScreen
 	    android:fragment="com.nest.settings.ui.MiscSettings"

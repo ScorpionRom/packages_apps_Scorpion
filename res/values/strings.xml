@@ -22,7 +22,7 @@
     <!-- General Categories -->
     <string name="buttons_settings_title">Buttons</string>
     <string name="lights_settings_title">Lights</string>
-    <string name="lockscreen_settings_title">Lock Screen</string>
+    <string name="lockscreen_title">Lock Screen</string>
     <string name="misc_settings_title">Miscellaneous</string>
     <string name="navigation_title">Navigation</string>
     <string name="notifications_title">Notification</string>
