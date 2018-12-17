@@ -28,6 +28,7 @@ import android.support.v7.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.SearchIndexableResource;
 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -38,11 +39,6 @@ import java.util.Arrays;
 
 public class GestureSettings extends SettingsPreferenceFragment implements Indexable {
     private static final String TAG = "GestureSettings";
-
-    @Override
-    public int getMetricsCategory() {
-        return -1;
-    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,5 +65,9 @@ public class GestureSettings extends SettingsPreferenceFragment implements Index
                 return Arrays.asList(sir);
             }
 	};
-}
 
+       @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.SCORPION;
+    }
+}
