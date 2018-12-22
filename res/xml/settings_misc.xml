@@ -28,5 +28,12 @@
         android:key="vibration_on_charge_state_changed"
         android:title="@string/vibration_on_charge_state_changed_title"
         android:summary="@string/vibration_on_charge_state_changed_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" /> 
+
+    <PreferenceScreen
+        android:key="default_usb_configuration"
+        android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
+        android:title="@string/usb_default_config_title"
+        android:summary="@string/usb_default_config_summary"/>
+
 </PreferenceScreen>
