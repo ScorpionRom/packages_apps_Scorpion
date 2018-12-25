@@ -35,6 +35,7 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
 
+import com.nest.settings.preferences.SystemSettingListPreference;
 import com.nest.settings.preferences.Utils;
 
 import android.provider.Settings;
@@ -46,6 +47,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_FACE_AUTO_UNLOCK = "face_auto_unlock";
     private static final String KEY_FACE_UNLOCK_PACKAGE = "com.android.facelock";
+    private static final String KEY_WEATHER_TEMP = "weather_lockscreen_unit";
 
     private SwitchPreference mFaceUnlock;
 
@@ -65,6 +67,13 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             mFaceUnlock.setChecked((Settings.Secure.getInt(getContext().getContentResolver(),
                     Settings.System.FACE_AUTO_UNLOCK, 0) == 1));
             mFaceUnlock.setOnPreferenceChangeListener(this);
+        }
+
+        SystemSettingListPreference mWeatherTemp =
+                (SystemSettingListPreference) findPreference(KEY_WEATHER_TEMP);
+        if (!com.android.internal.util.du.Utils.isPackageInstalled(
+                getActivity(), "org.pixelexperience.weather.client")) {
+            getPreferenceScreen().removePreference(mWeatherTemp);
         }
 
     }
