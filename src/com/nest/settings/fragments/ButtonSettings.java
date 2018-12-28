@@ -76,6 +76,8 @@ public class NavigationOptions extends SettingsPreferenceFragment
     private ListPreference mAssistLongPress;
     private ListPreference mAssistDoubleTap;
 
+    private Preference mButtonBrightness;
+
     private PreferenceCategory homeCategory;
     private PreferenceCategory backCategory;
     private PreferenceCategory menuCategory;
@@ -84,7 +86,6 @@ public class NavigationOptions extends SettingsPreferenceFragment
     private PreferenceCategory cameraCategory;
 
     private SwitchPreference mNavigationBar;
-    private SwitchPreference mButtonBrightness;
 
     private SystemSettingSwitchPreference mNavigationArrowKeys;
 
@@ -99,7 +100,7 @@ public class NavigationOptions extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.settings.button);
+        addPreferencesFromResource(R.xml.settings_button);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
 
@@ -128,10 +129,7 @@ public class NavigationOptions extends SettingsPreferenceFragment
                 defaultToNavigationBar ? 1 : 0) == 1));
         mNavigationBar.setOnPreferenceChangeListener(this);
 
-        mButtonBrightness = (SwitchPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
-        mButtonBrightness.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.BUTTON_BRIGHTNESS_ENABLED, 1) == 1));
-        mButtonBrightness.setOnPreferenceChangeListener(this);
+        mButtonBrightness = (Preference) findPreference(KEY_BUTTON_BRIGHTNESS);
 
         mBackLongPress = (ListPreference) findPreference(KEY_BACK_LONG_PRESS_ACTION);
         int backlongpress = Settings.System.getIntForUser(getContentResolver(),
@@ -247,11 +245,6 @@ public class NavigationOptions extends SettingsPreferenceFragment
                     Settings.System.NAVIGATION_BAR_ENABLED, value ? 1 : 0);
             navbarCheck();
             updateBacklight();
-            return true;
-        } else if (preference == mButtonBrightness) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.BUTTON_BRIGHTNESS_ENABLED, value ? 1 : 0);
             return true;
         } else if (preference == mBackLongPress) {
             int value = Integer.parseInt((String) objValue);
