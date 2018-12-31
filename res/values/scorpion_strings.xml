@@ -652,4 +652,10 @@
     <string name="ambient_doze_title">Doze options</string>
     <string name="custom_ambient_display_title">Ambient options</string>
     <string name="custom_ambient_display_summary">Configure advanced ambient display behaviour</string>
+
+    <!-- Hide Lockscreen items -->
+    <string name="lockscreen_clock_title">Clock widget</string>
+    <string name="lockscreen_clock_summary">Show the clock widget on the lockscreen</string>
+    <string name="lockscreen_info_title">Items underneath the clock</string>
+    <string name="lockscreen_info_summary">Show the date, weather, alarms and zen on the lockscreen</string>
 </resources>
