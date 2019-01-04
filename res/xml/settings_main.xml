@@ -75,6 +75,12 @@
 	    android:title="@string/notifications_title"/>
 
 	<PreferenceScreen
+	    android:fragment="com.nest.settings.ui.QSSettings"
+	    android:key="qs_settings"
+            android:icon="@drawable/ic_settings_quicksettings" 
+	    android:title="@string/qs_settings_title"/>
+
+	<PreferenceScreen
 	    android:fragment="com.nest.settings.ui.RecentsSettings"
 	    android:key="recents_settings"
             android:icon="@drawable/ic_settings_recents"
