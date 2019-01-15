@@ -18,6 +18,10 @@
 
 package com.nest.settings.fragments;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v7.preference.PreferenceCategory;
@@ -41,6 +45,9 @@ public class ButtonSettings extends SettingsPreferenceFragment
 
     private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar";
     private static final String KEY_NAVIGATION_ARROW_KEYS  = "navigation_bar_menu_arrow_keys";
+
+    private static final String KEY_SWIPE_UP_PREFERENCE = "swipe_one_home_button";
+    private static final String ACTION_QUICKSTEP = "android.intent.action.QUICKSTEP_SERVICE";
 
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
@@ -77,6 +84,7 @@ public class ButtonSettings extends SettingsPreferenceFragment
     private ListPreference mAssistDoubleTap;
 
     private Preference mButtonBrightness;
+    private Preference mSwipePreference;
 
     private PreferenceCategory homeCategory;
     private PreferenceCategory backCategory;
@@ -130,6 +138,7 @@ public class ButtonSettings extends SettingsPreferenceFragment
         mNavigationBar.setOnPreferenceChangeListener(this);
 
         mButtonBrightness = (Preference) findPreference(KEY_BUTTON_BRIGHTNESS);
+        mSwipePreference = (Preference) findPreference(KEY_SWIPE_UP_PREFERENCE);
 
         mBackLongPress = (ListPreference) findPreference(KEY_BACK_LONG_PRESS_ACTION);
         int backlongpress = Settings.System.getIntForUser(getContentResolver(),
@@ -386,6 +395,8 @@ public class ButtonSettings extends SettingsPreferenceFragment
         final int swipeUpEnabled = Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, defaultValue);
 
+        mSwipePreference.setEnabled(isGestureAvailable(getContext()));
+
         if (deviceKeys == 0) {
             if (navigationBar) {
                 homeCategory.setEnabled(true);
@@ -487,5 +498,27 @@ public class ButtonSettings extends SettingsPreferenceFragment
     private boolean fullGestureModeEnabled() {
         return Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.FULL_GESTURE_NAVBAR, OFF) == ON;
+    }
+
+    private static boolean isGestureAvailable(Context context) {
+        final boolean defaultToNavigationBar = context.getResources().getBoolean(
+                com.android.internal.R.bool.config_defaultToNavigationBar);
+        final boolean navigationBarEnabled = Settings.System.getIntForUser(
+                context.getContentResolver(), Settings.System.NAVIGATION_BAR_ENABLED,
+                defaultToNavigationBar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+
+        if (!navigationBarEnabled) {
+            return false;
+        }
+
+        final ComponentName recentsComponentName = ComponentName.unflattenFromString(
+                context.getString(com.android.internal.R.string.config_recentsComponentName));
+        final Intent quickStepIntent = new Intent(ACTION_QUICKSTEP)
+                .setPackage(recentsComponentName.getPackageName());
+        if (context.getPackageManager().resolveService(quickStepIntent,
+                PackageManager.MATCH_SYSTEM_ONLY) == null) {
+            return false;
+        }
+        return true;
     }
 }
