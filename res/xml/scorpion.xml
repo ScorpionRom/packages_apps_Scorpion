@@ -21,13 +21,15 @@
     <PreferenceScreen
         android:key="buttonsettings_category"
         android:title="@string/button_title"
+        android:summary="@string/button_summary"
         android:icon="@drawable/ic_settings_button"
         android:fragment="com.nest.settings.fragments.ButtonSettings" />
 
     <!-- Gestures -->
     <PreferenceScreen
         android:key="gestures_category"
-        android:title="@string/gestures_title" 
+        android:title="@string/gestures_title"
+        android:summary="@string/gestures_summary" 
         android:icon="@drawable/ic_settings_gesture"
         android:fragment="com.nest.settings.fragments.GestureSettings" />
 
@@ -35,6 +37,7 @@
     <PreferenceScreen
         android:key="lockscreen_category"
         android:title="@string/lockscreen_title"
+        android:summary="@string/lockscreen_summary"
         android:icon="@drawable/ic_settings_lockscreen" 
         android:fragment="com.nest.settings.fragments.LockScreenSettings" />
 	
@@ -42,6 +45,7 @@
     <PreferenceScreen
         android:key="misc_category"
         android:title="@string/misc_title"
+        android:summary="@string/misc_summary"
         android:icon="@drawable/ic_settings_misc" 
         android:fragment="com.nest.settings.fragments.MiscSettings" />
 
@@ -49,6 +53,7 @@
     <PreferenceScreen
         android:key="navigationbar_category"
         android:title="@string/navigation_title"
+        android:summary="@string/navigation_summary"
         android:icon="@drawable/ic_settings_navigation" 
         android:fragment="com.nest.settings.fragments.NavbarSettings" />
 
@@ -56,6 +61,7 @@
     <PreferenceScreen
         android:key="notifications_category"
         android:title="@string/notifications_title"
+        android:summary="@string/notifications_summary"
         android:icon="@drawable/ic_settings_notifications"
         android:fragment="com.nest.settings.fragments.NotificationSettings" />
 
@@ -63,13 +69,16 @@
     <PreferenceScreen
         android:key="powermenu__category"
         android:title="@string/powermenu_title"
-        android:icon="@drawable/ic_settings_powermenu" 
+        android:icon="@drawable/ic_settings_powermenu"
+        android:summary="@string/powermenu_summary"
+        android:icon="@drawable/ic_settings_ic_settings_powermenu" 
         android:fragment="com.nest.settings.fragments.PowerMenuSettings" />
 
-    <!-- Quick Settings panel -->
+    <!-- Quick Settings -->
     <PreferenceScreen
         android:key="quicksettings_category"
         android:title="@string/quicksettings_title"
+        android:summary="@string/quicksettings_summary"
         android:icon="@drawable/ic_settings_quicksettings"
         android:fragment="com.nest.settings.fragments.QuickSettings" />
 
@@ -77,6 +86,7 @@
     <PreferenceScreen
         android:key="recents_category"
         android:title="@string/recents_title"
+        android:summary="@string/recents_summary"
         android:icon="@drawable/ic_settings_recents"
         android:fragment="com.nest.settings.fragments.RecentsSettings" />
 
@@ -84,13 +94,14 @@
     <PreferenceScreen
         android:key="statusbar_category"
         android:title="@string/statusbar_title"
+        android:summary="@string/statusbar_summary"
         android:icon="@drawable/ic_settings_statusbar"
         android:fragment="com.nest.settings.fragments.StatusBarSettings" />
 
     <!-- System -->
     <PreferenceScreen
         android:key="system_category"
-        android:title="@string/system_title" 
+        android:title="@string/system_title"
+        android:summary="@string/system_summary" 
         android:fragment="com.nest.settings.fragments.SystemSettings" />
-
 </PreferenceScreen>
