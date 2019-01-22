@@ -44,7 +44,7 @@
             android:defaultValue="3"
             android:dependency="show_clear_all_recents" />
 
-       <PreferenceScreen
+       <com.nest.settings.preferences.RecentsIconPackPreference
             android:key="recents_icon_pack"
             android:title="@string/recents_icon_pack_title"
             android:summary="@string/recents_icon_pack_summary" />
