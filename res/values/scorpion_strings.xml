@@ -49,6 +49,9 @@
     <string name="system_summary">Modify Generic System Settings</string>
     <string name="volume_summary">Volume rockers</string>
 
+    <!-- Sub categories -->
+    <string name="sub_cat_advanced">Advanced</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
