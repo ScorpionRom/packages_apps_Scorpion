@@ -36,7 +36,7 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.nest.settings.preferences.SystemSettingSwitchPreference;
 
-public class NavigationOptions extends SettingsPreferenceFragment
+public class ButtonSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar";

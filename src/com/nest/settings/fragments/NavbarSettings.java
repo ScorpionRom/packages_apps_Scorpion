@@ -40,7 +40,7 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 
-public class NavigationBar extends SettingsPreferenceFragment
+public class NavbarSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_PULSE_SETTINGS = "pulse_settings";
