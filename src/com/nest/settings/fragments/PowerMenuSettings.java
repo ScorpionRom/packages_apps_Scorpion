@@ -36,6 +36,7 @@ import android.provider.Settings;
 import com.android.settings.R;
 import android.support.annotation.NonNull;
 
+import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 
