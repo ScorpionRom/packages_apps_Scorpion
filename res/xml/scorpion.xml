@@ -71,7 +71,6 @@
         android:title="@string/powermenu_title"
         android:icon="@drawable/ic_settings_powermenu"
         android:summary="@string/powermenu_summary"
-        android:icon="@drawable/ic_settings_ic_settings_powermenu" 
         android:fragment="com.nest.settings.fragments.PowerMenuSettings" />
 
     <!-- Quick Settings -->
