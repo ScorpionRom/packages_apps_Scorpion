@@ -35,10 +35,14 @@ import com.android.settings.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-public class ButtonSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class NavigationOptions extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_PULSE_SETTINGS = "pulse_settings";
+    private static final String KEY_LAYOUT_SETTINGS = "layout_settings";
+    private static final String KEY_NAVIGATION_BAR_ENABLED = "navigation_bar";
 
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
-
     private static final String KEY_BACK_LONG_PRESS_ACTION = "back_key_long_press";
     private static final String KEY_BACK_DOUBLE_TAP_ACTION = "back_key_double_tap";
     private static final String KEY_HOME_LONG_PRESS_ACTION = "home_key_long_press";
@@ -59,8 +63,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
     private static final String KEY_CATEGORY_APP_SWITCH    = "app_switch_key";
     private static final String KEY_CATEGORY_CAMERA        = "camera_key";
 
-    private SwitchPreference mButtonBrightness;
-
     private ListPreference mBackLongPress;
     private ListPreference mBackDoubleTap;
     private ListPreference mHomeLongPress;
@@ -74,6 +76,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
     private ListPreference mAssistLongPress;
     private ListPreference mAssistDoubleTap;
 
+    private PreferenceScreen mPulseSettings;
+    private Preference mLayoutSettings;
+
+    private SwitchPreference mNavigationBar;
+    private SwitchPreference mButtonBrightness;
+
     private static final int KEY_MASK_HOME = 0x01;
     private static final int KEY_MASK_BACK = 0x02;
     private static final int KEY_MASK_MENU = 0x04;
@@ -84,7 +92,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.settings_button);
+        addPreferencesFromResource(R.xml.settings.button);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
         final ContentResolver resolver = getActivity().getContentResolver();
@@ -105,6 +113,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
         boolean hasAppSwitch = (deviceKeys & KEY_MASK_APP_SWITCH) != 0 || navigationBarEnabled;
         boolean hasCamera = (deviceKeys & KEY_MASK_CAMERA) != 0;
 
+        mPulseSettings = (PreferenceScreen) findPreference(KEY_PULSE_SETTINGS);
+        mLayoutSettings = (Preference) findPreference(KEY_LAYOUT_SETTINGS);
+
         PreferenceCategory homeCategory =
                 (PreferenceCategory) prefSet.findPreference(KEY_CATEGORY_HOME);
         PreferenceCategory backCategory =
@@ -117,6 +128,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
                 (PreferenceCategory) prefSet.findPreference(KEY_CATEGORY_APP_SWITCH);
         PreferenceCategory cameraCategory =
                 (PreferenceCategory) prefSet.findPreference(KEY_CATEGORY_CAMERA);
+
+        mNavigationBar = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_ENABLED);
+        mNavigationBar.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_ENABLED,
+                defaultToNavigationBar ? 1 : 0) == 1));
+        mNavigationBar.setOnPreferenceChangeListener(this);
 
         mButtonBrightness = (SwitchPreference) findPreference(KEY_BUTTON_BRIGHTNESS);
         mButtonBrightness.setChecked((Settings.System.getInt(getContentResolver(),
@@ -229,19 +246,17 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
             prefSet.removePreference(cameraCategory);
         }
 
-        if (navigationBarEnabled) {
-            mButtonBrightness.setEnabled(false);
-            homeCategory.setEnabled(false);
-            backCategory.setEnabled(false);
-            menuCategory.setEnabled(false);
-            assistCategory.setEnabled(false);
-            appSwitchCategory.setEnabled(false);
-            cameraCategory.setEnabled(false);
-        }
+        updateBacklight();
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mButtonBrightness) {
+        if (preference == mNavigationBar) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_ENABLED, value ? 1 : 0);
+            updateBacklight();
+            return true;
+        } else if (preference == mButtonBrightness) {
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.BUTTON_BRIGHTNESS_ENABLED, value ? 1 : 0);
@@ -357,8 +372,23 @@ public class ButtonSettings extends SettingsPreferenceFragment implements Prefer
         }
         return false;
     }
+
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SCORPION;
+    }
+
+    private void updateBacklight() {
+        boolean defaultToNavigationBar = getResources().getBoolean(
+                com.android.internal.R.bool.config_defaultToNavigationBar);
+        boolean navigationBarEnabled = Settings.System.getIntForUser(
+                getActivity().getContentResolver(), Settings.System.NAVIGATION_BAR_ENABLED,
+                defaultToNavigationBar ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+
+        if (navigationBarEnabled) {
+            mButtonBrightness.setEnabled(false);
+        } else {
+            mButtonBrightness.setEnabled(true);
+        }
     }
 }

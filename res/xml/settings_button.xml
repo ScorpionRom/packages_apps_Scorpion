@@ -18,11 +18,27 @@
         android:title="@string/button_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.nest.settings.preferences.SystemSettingSwitchPreference
-        android:key="volume_button_music_control"
-        android:title="@string/volume_button_music_control_title"
-        android:summary="@string/volume_button_music_control_summary"
-        android:defaultValue="false" />
+    <SwitchPreference
+        android:key="navigation_bar"
+        android:title="@string/navigation_bar_title"
+        android:summary="@string/navigation_bar_title_summary" />
+
+    <Preference
+        android:key="layout_settings"
+        android:title="@string/systemui_tuner_navbar_title"
+        android:summary="@string/systemui_tuner_navbar_enabled_summary"
+        android:dependency="navigation_bar">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.systemui"
+            android:targetClass="com.android.systemui.tuner.NavbarActivity" />
+    </Preference>
+
+    <Preference
+        android:key="swipe_one_home_button"
+        android:fragment="com.android.settings.gestures.SwipeUpGestureSettings"
+        android:title="@string/swipe_up_to_switch_apps_title"
+        android:summary="@string/swipe_up_to_switch_apps_custom_summary"
+        android:dependency="navigation_bar" />
 
     <SwitchPreference
         android:key="button_brightness"
@@ -37,15 +53,13 @@
             android:key="home_key_long_press"
             android:title="@string/long_press_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.LongPressHomePreferenceController" />
+            android:entryValues="@array/action_values" />
 
         <ListPreference
             android:key="home_key_double_tap"
             android:title="@string/double_tap_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.DoubleTapHomePreferenceController" />
+            android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
 
@@ -57,15 +71,13 @@
             android:key="back_key_long_press"
             android:title="@string/long_press_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.LongPressBackPreferenceController" />
+            android:entryValues="@array/action_values" />
 
         <ListPreference
             android:key="back_key_double_tap"
             android:title="@string/double_tap_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.DoubleTapBackPreferenceController" />
+            android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
 
@@ -77,15 +89,13 @@
             android:key="menu_key_long_press"
             android:title="@string/long_press_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.LongPressMenuPreferenceController" />
+            android:entryValues="@array/action_values" />
 
         <ListPreference
             android:key="menu_key_double_tap"
             android:title="@string/double_tap_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.DoubleTapMenuPreferenceController" />
+            android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
 
@@ -97,15 +107,13 @@
             android:key="assist_key_long_press"
             android:title="@string/long_press_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.LongPressAssistPreferenceController" />
+            android:entryValues="@array/action_values" />
 
         <ListPreference
             android:key="assist_key_double_tap"
             android:title="@string/double_tap_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.DoubleTapAssistPreferenceController" />
+            android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
 
@@ -117,15 +125,13 @@
             android:key="app_switch_key_long_press"
             android:title="@string/long_press_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.LongPressAppSwitchPreferenceController" />
+            android:entryValues="@array/action_values" />
 
         <ListPreference
             android:key="app_switch_key_double_tap"
             android:title="@string/double_tap_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.DoubleTapAppSwitchPreferenceController" />
+            android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
 
@@ -137,15 +143,33 @@
             android:key="camera_key_long_press"
             android:title="@string/long_press_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.LongPressCameraPreferenceController" />
+            android:entryValues="@array/action_values" />
 
         <ListPreference
             android:key="camera_key_double_tap"
             android:title="@string/double_tap_title"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values"
-            settings:controller="com.nest.settings.fragments.buttons.DoubleTapCameraPreferenceController" />
+            android:entryValues="@array/action_values" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_navbar_general"
+        android:title="@string/sub_cat_advanced" >
+
+        <com.nest.settings.preferences.SystemSettingSwitchPreference
+            android:key="navigation_bar_menu_arrow_keys"
+            android:title="@string/show_navbar_arrow_keys_title"
+            android:summary="@string/show_navbar_arrow_keys_summary"
+            android:dependency="navigation_bar"
+            android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="pulse_settings"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:dependency="navigation_bar"
+            android:fragment="com.dirtyunicorns.tweaks.fragments.PulseSettings" />
 
     </PreferenceCategory>
 
