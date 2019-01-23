@@ -26,7 +26,7 @@
     <string name="gestures_title">Gestures</string>
     <string name="lockscreen_title">Lock Screen</string>
     <string name="misc_title">Miscellaneous</string>
-    <string name="navigation_title">Navigation Settings</string>
+    <string name="navigation_title">Navigation bar</string>
     <string name="notifications_title">Notifications</string>
     <string name="powermenu_title">Power Menu</string>
     <string name="quicksettings_title">Quick Settings</string>
@@ -69,12 +69,6 @@
     <string name="statusbar_settings_title">Status Bar</string>     
     <string name="gesture_preference">AOSP gestures</string>
 
-    <!-- Statusbar Tuner -->
-    <string name="statusbar_items_title">Statusbar items</string>
-
-    <!-- Lockscreen icons -->
-    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
-
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
@@ -84,24 +78,6 @@
     <string name="seekbar_default_value_already_set">Default value is already set</string>
     <string name="seekbar_default_string">Default</string>
 
-    <!-- Battery styles -->
-    <string name="battery_options_title">Battery Options</string>
-    <string name="battery_options_summary">Customize the statusbar battery</string>
-    <string name="battery_style_title">Battery icon style</string>
-    <string name="battery_style_summary">Change the style of the status bar battery</string>
-    <string name="battery_style_port">Portrait</string>
-    <string name="battery_style_circle">Circle</string>
-    <string name="battery_style_dotted_circle">Dotted circle</string>
-    <string name="battery_style_text">Text</string>
-    <string name="battery_style_hidden">Hidden</string>
-
-    <!-- Battery percent -->
-    <string name="show_battery_percent_title">Show battery percentage</string>
-    <string name="show_battery_percent_summary">Show battery level percentage near the icon</string>
-    <string name="battery_percent_hidden">Hidden</string>
-    <string name="battery_percent_outside">Outside</string>
-    <string name="battery_percent_inside">Inside</string>
-
     <!-- Power Menu -->
     <string name="powermenu_reboot_title">Restart</string>
     <string name="powermenu_advanced_restart_title">Advanced restart</string>
@@ -109,9 +85,20 @@
     <string name="powermenu_lockdown_title">Lockdown</string>
     <string name="powermenu_screenshot_title">Screenshot</string>
 
+
+    <!-- Lockscreen Options -->
+    <!-- Lockscreen tuner -->
+    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Show charging current, voltage and battery temperature on lockscreen while charging</string>
     <!-- Lockscreen Media art -->
+    <string name="lockscreen_items_other">Other</string>
     <string name="media_art_title">Full-screen media cover art</string>
     <string name="media_art_summary">Set full-screen media cover art on the lockscreen</string>
+    <!-- Fingerprint unlock keystore -->  
+    <string name="fp_unlock_keystore_title">Fingerprint unlock</string>  
+    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot without PIN/Password/Pattern\nNote: at your own risk!</string>
 
     <!-- QS options -->
     <!-- QS rows and columns -->
@@ -128,14 +115,12 @@
     <string name="qs_brightness_position_bottom_title">Brightness slider on bottom</string>
     <string name="qs_brightness_position_bottom_summary">Show a brightness slider on bottom quick settings</string>
 
-    <!-- Fingerprint unlock keystore -->  
-    <string name="fp_unlock_keystore_title">Fingerprint unlock</string>  
-    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot without PIN/Password/Pattern\nNote: at your own risk!</string>
-
+    <!-- Status Bar options -->
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar items</string>
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_icon_title">VoLTE icon</string>
     <string name="volte_icon_summary">Display VoLTE icon in statusbar</string>
-
     <!-- Status bar clock and date options -->
     <string name="clock_options_title">Clock options</string>
     <string name="clock_options_summary">Customize your statusbar clock</string>
@@ -169,4 +154,22 @@
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
     <string name="clock_date_position">Date position</string>
+
+    <!-- Battery styles -->
+    <string name="battery_options_title">Battery Options</string>
+    <string name="battery_options_summary">Customize the statusbar battery</string>
+    <string name="battery_style_title">Battery icon style</string>
+    <string name="battery_style_summary">Change the style of the status bar battery</string>
+    <string name="battery_style_port">Portrait</string>
+    <string name="battery_style_circle">Circle</string>
+    <string name="battery_style_dotted_circle">Dotted circle</string>
+    <string name="battery_style_text">Text</string>
+    <string name="battery_style_hidden">Hidden</string>
+
+    <!-- Battery percent -->
+    <string name="show_battery_percent_title">Show battery percentage</string>
+    <string name="show_battery_percent_summary">Show battery level percentage near the icon</string>
+    <string name="battery_percent_hidden">Hidden</string>
+    <string name="battery_percent_outside">Outside</string>
+    <string name="battery_percent_inside">Inside</string>
 </resources>
