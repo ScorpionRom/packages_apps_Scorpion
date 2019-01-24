@@ -27,14 +27,21 @@ import android.preference.Preference;
 import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
+import com.nest.settings.preferences.Utils;
 
 public class ScorpionNest extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
+        final String KEY_DEVICE_PART = "device_extras_category";
+        final String KEY_DEVICE_PART_PACKAGE_NAME = "com.dirtyunicorns.settings.device";
         addPreferencesFromResource(R.xml.scorpion);
+
+        // Extras
+        if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
+        }
     }
 
     @Override

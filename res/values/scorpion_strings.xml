@@ -75,6 +75,10 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
+    <!-- Device Extras -->
+    <string name="device_extras_title">Device extras</string>
+    <string name="device_extras_summary">Device specific options</string>
+
     <!-- SeekBar -->
     <string name="seekbar_no_default_value">No default value set</string>
     <string name="seekbar_default_value_set">Value set to default of <xliff:g id="number">%d</xliff:g></string>
