@@ -71,7 +71,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
         SystemSettingListPreference mWeatherTemp =
                 (SystemSettingListPreference) findPreference(KEY_WEATHER_TEMP);
-        if (!com.android.internal.util.du.Utils.isPackageInstalled(
+        if (!com.android.internal.util.scorpion.Utils.isPackageInstalled(
                 getActivity(), "org.pixelexperience.weather.client")) {
             getPreferenceScreen().removePreference(mWeatherTemp);
         }
