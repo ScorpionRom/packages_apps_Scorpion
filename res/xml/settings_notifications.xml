@@ -35,7 +35,8 @@
             android:key="vibrate_on_disconnect"
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="true" />
-
+    </PreferenceCategory>
+    
     <!-- Heads up -->
     <Preference
         android:key="heads_up_notifications"
