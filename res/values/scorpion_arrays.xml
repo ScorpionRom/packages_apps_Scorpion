@@ -13,13 +13,22 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Lockscreen clock styles -->
+    <string-array name="lockscreen_clock_selection_entries" translatable="false">
+        <item>@string/lockscreen_clock_selection_digital</item>
+        <item>@string/lockscreen_clock_selection_digital_bold</item>
+        <item>@string/lockscreen_clock_selection_analog</item>
+        <item>@string/lockscreen_clock_selection_sammy</item>
+        <item>@string/lockscreen_clock_selection_sammy_bold</item>
+    </string-array>
 
     <string-array name="lockscreen_clock_selection_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
-        <item>3</item>
         <item>4</item>
         <item>5</item>
     </string-array>
@@ -321,15 +330,6 @@
         <item>@string/file_header_provider</item>
     </string-array>
 
-    <!-- Lockscreen clock styles -->
-    <string-array name="lockscreen_clock_selection_entries" translatable="false">
-        <item>@string/lockscreen_clock_selection_digital</item>
-        <item>@string/lockscreen_clock_selection_digital_bold</item>
-        <item>@string/lockscreen_clock_selection_analog</item>
-        <item>@string/lockscreen_clock_selection_sammy</item>
-        <item>@string/lockscreen_clock_selection_sammy_bold</item>
-    </string-array>
-
     <!-- Notification ticker -->
     <string-array name="ticker_animation_mode_entries" translatable="false">
         <item>@string/ticker_animation_mode_alpha_fade</item>
@@ -396,5 +396,20 @@
         <item>22</item>
         <item>23</item>
         <item>24</item>
+    </string-array>
+
+    <!-- Carrier Label -->
+    <string-array name="carrier_label_entries">
+        <item>@string/show_carrier_disabled</item>
+        <item>@string/show_carrier_keyguard</item>
+        <item>@string/show_carrier_statusbar</item>
+        <item>@string/show_carrier_enabled</item>
+    </string-array>
+
+    <string-array name="carrier_label_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 </resources>
