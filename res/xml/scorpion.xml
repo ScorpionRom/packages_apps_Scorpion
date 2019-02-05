@@ -93,12 +93,12 @@
         android:fragment="com.nest.settings.fragments.QuickSettings" />
 
     <!-- Recents -->
-    <!-- <PreferenceScreen
+    <PreferenceScreen
         android:key="recents_category"
         android:title="@string/recents_title"
         android:summary="@string/recents_summary"
         android:icon="@drawable/ic_settings_recents"
-        android:fragment="com.nest.settings.fragments.RecentsSettings" /> -->
+        android:fragment="com.nest.settings.fragments.RecentsSettings" />
 
     <!-- Status Bar -->
     <PreferenceScreen
