@@ -18,6 +18,13 @@
     android:title="@string/lockscreen_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:title="@string/lockscreen_tuner_title" >
+    <intent android:action="android.intent.action.MAIN"
+        android:targetPackage="com.android.systemui"
+        android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
+    </Preference> 
+
     <com.nest.settings.preferences.SystemSettingListPreference
         android:key="weather_lockscreen_unit"
         android:dialogTitle="@string/weather_unit"
@@ -26,13 +33,6 @@
         android:entries="@array/weather_unit_entries"
         android:entryValues="@array/weather_unit_values"
         android:defaultValue="0" />
-
-    <Preference
-        android:title="@string/lockscreen_tuner_title" >
-    <intent android:action="android.intent.action.MAIN"
-        android:targetPackage="com.android.systemui"
-        android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
-    </Preference> 
 
     <com.nest.settings.preferences.SystemSettingListPreference
         android:key="lockscreen_clock_selection"
