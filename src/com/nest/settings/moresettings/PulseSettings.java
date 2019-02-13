@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nest.settings.fragments;
+package com.nest.settings.moresettings;
 
 import android.graphics.Color;
 import android.os.Bundle;

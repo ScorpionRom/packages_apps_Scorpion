@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nest.settings.fragments;
+package com.nest.settings.moresettings;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;

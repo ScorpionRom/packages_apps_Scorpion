@@ -29,7 +29,7 @@
          android:key="batterybar_settings"
          android:title="@string/battery_bar_title"
          android:summary="@string/battery_bar_summary"
-         android:fragment="com.nest.settings.fragments.BatterybarSettings" />
+         android:fragment="com.nest.settings.moresettings.BatterybarSettings" />
 
     <com.nest.settings.preferences.SystemSettingSwitchPreference
          android:key="status_bar_brightness_control"
@@ -41,13 +41,13 @@
         android:key="clock_options_category"
         android:title="@string/clock_options_title"
         android:summary="@string/clock_options_summary"
-        android:fragment="com.nest.settings.fragments.ClockOptions" />
+        android:fragment="com.nest.settings.moresettings.ClockOptions" />
 
     <Preference
         android:key="battery_options_category"
         android:title="@string/battery_options_title"
         android:summary="@string/battery_options_summary"
-        android:fragment="com.nest.settings.fragments.BatteryOptions" />
+        android:fragment="com.nest.settings.moresettings.BatteryOptions" />
 
     <com.nest.settings.preferences.SystemSettingSwitchPreference
         android:key="status_bar_notif_count"

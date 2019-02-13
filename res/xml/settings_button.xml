@@ -51,7 +51,7 @@
         android:title="@string/button_backlight_title"
         android:summary="@string/button_backlight_summary"
         android:persistent="false"
-        android:fragment="com.nest.settings.fragments.ButtonBrightness" />
+        android:fragment="com.nest.settings.moresettings.ButtonBrightness" />
 
     <PreferenceCategory
         android:key="home_key"
@@ -183,7 +183,7 @@
             android:title="@string/pulse_settings"
             android:summary="@string/pulse_settings_summary"
             android:dependency="navigation_bar"
-            android:fragment="com.nest.settings.fragments.PulseSettings" />
+            android:fragment="com.nest.settings.moresettings.PulseSettings" />
 
     </PreferenceCategory>
 

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.nest.settings.fragments;
+package com.nest.settings.moresettings;
 
 import android.content.ContentResolver;
 import android.content.Context;
