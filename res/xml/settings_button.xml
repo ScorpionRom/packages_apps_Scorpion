@@ -18,6 +18,10 @@
         android:title="@string/button_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="nav_bar"
+        android:title="@string/nav_bar_title">
+
     <SwitchPreference
         android:key="navigation_bar"
         android:title="@string/navigation_bar_title"
@@ -45,6 +49,8 @@
         android:title="@string/swipe_up_to_switch_apps_title"
         android:summary="@string/swipe_up_to_switch_apps_custom_summary"
         android:dependency="navigation_bar" />
+
+    </PreferenceCategory>
 
     <Preference
         android:key="button_brightness"

@@ -52,6 +52,12 @@
     <string name="volume_summary">Volume rockers</string>
 
     <!-- Sub categories -->
+    <string name="brightness_slider_title" >Brightness Slider</string>
+    <string name="lockscreen_ui_title" >LockScreen UI</string>
+    <string name="nav_bar_title">Navigation bar</string>
+    <string name="powermenu_category" >Power Menu</string>
+    <string name="quck_settings_title" >Quick Settings</string>
+    <string name="screen_off">Screen off gestures</string>
     <string name="sub_cat_advanced">Advanced</string>
     <string name="statusbar_ticker" >Ticker</string>
 
