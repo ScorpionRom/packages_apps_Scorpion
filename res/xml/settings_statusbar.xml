@@ -84,6 +84,18 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="carrier_label_category"
+        android:title="@string/carrier_label_title">
+
+    <Preference
+         android:key="carrier_label"
+         android:fragment="com.nest.settings.moresettings.CarrierLabel"
+         android:title="@string/custom_carrier_label_title"
+         android:summary="@string/custom_carrier_label_explain" />
+
+    </PreferenceCategory>
+
     <com.nest.settings.preferences.SystemSettingSwitchPreference
         android:key="volte_icon"
         android:title="@string/volte_icon_title"

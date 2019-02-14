@@ -53,7 +53,7 @@
 
     <!-- Sub categories -->
     <string name="brightness_slider_title" >Brightness Slider</string>
-    <string name="carrier_label_title">Custom carrier label</string>
+    <string name="carrier_label_title">Carrier Label</string>
     <string name="recents_hide_title">Hide Apps</string>
     <string name="lockscreen_ui_title" >LockScreen UI</string>
     <string name="nav_bar_title">Navigation bar</string>
