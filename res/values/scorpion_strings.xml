@@ -22,6 +22,7 @@
 
     <!-- Categories -->
     <string name="settings_title">Main Settings</string>
+    <string name="active_edge_title">Active Edge</string>
     <string name="ambient_display">Ambient Settings</string>
     <string name="button_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
@@ -37,6 +38,7 @@
     <string name="volume_title">Volume rockers</string>
 
     <!-- Category Summaries -->
+    <string name="active_edge_summary">Configure Active Edge options</string>
     <string name="ambient_summary">Enable ambient display options</string>
     <string name="button_summary">Buttons Options</string>
     <string name="gestures_summary">Gestures Menu</string>
@@ -375,6 +377,12 @@
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>  
+
+    <!-- Active edge -->
+    <string name="active_edge_actions_title">Squeeze action</string>
+    <string name="active_edge_sensitivity_title">Squeeze sensitivity</string>
+    <string name="active_edge_wake_title">Allow when screen is off</string>
+    <string name="active_edge_wake_summary">Trigger any action even when the screen is off</string>  
 
     <!-- Toast icon -->
     <string name="toast_icon_title">Toast icon</string>
