@@ -22,7 +22,7 @@
 
     <!-- Categories -->
     <string name="settings_title">Main Settings</string>
-    <string name="ambient_title">Ambient</string>
+    <string name="ambient_display">Ambient Settings</string>
     <string name="button_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
     <string name="lockscreen_title">Lock Screen</string>
@@ -52,8 +52,10 @@
     <string name="volume_summary">Volume rockers</string>
 
     <!-- Sub categories -->
+    <string name="ambient_title">Ambient Display</string>
     <string name="brightness_slider_title" >Brightness Slider</string>
     <string name="carrier_label_title">Carrier Label</string>
+    <string name="doze_title">Doze</string>
     <string name="recents_hide_title">Hide Apps</string>
     <string name="lockscreen_ui_title" >LockScreen UI</string>
     <string name="misc_buttons_title">Misc. Buttons</string>
@@ -634,6 +636,7 @@
     <string name="block_on_secure_keyguard_summary">Disables quick settings on secure lockscreen</string> 
 
     <!-- Ambient category -->
+    <string name="ambient_doze_title">Doze options</string>
     <string name="custom_ambient_display_title">Ambient options</string>
     <string name="custom_ambient_display_summary">Configure advanced ambient display behaviour</string>
 </resources>

@@ -17,6 +17,14 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/settings_title" >
 
+    <!-- Ambient -->
+    <PreferenceScreen
+        android:key="ambient_category"
+        android:title="@string/ambient_title"
+        android:summary="@string/ambient_summary"
+        android:icon="@drawable/ic_settings_ambient"
+        android:fragment="com.nest.settings.fragments.AmbientSettings" />
+
     <!-- Buttons -->
     <PreferenceScreen
         android:key="buttonsettings_category"

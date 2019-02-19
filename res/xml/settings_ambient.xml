@@ -17,7 +17,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/ambient_title">
+    android:title="@string/ambient_display">
+
+    <PreferenceCategory
+        android:key="doze_title"
+        android:title="@string/ambient_doze_title" >
 
     <Preference
         android:key="ambient_display_custom"
@@ -28,6 +32,8 @@
             android:targetPackage="com.custom.ambient.display"
             android:targetClass="com.custom.ambient.display.DozeSettings"/>
     </Preference>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="ambient_battery"

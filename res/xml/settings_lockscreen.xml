@@ -42,12 +42,6 @@
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
-
-    <PreferenceScreen
-        android:key="ambient_category"
-        android:title="@string/ambient_title"
-        android:summary="@string/ambient_summary"
-        android:fragment="com.nest.settings.fragments.AmbientSettings" />
   
     <PreferenceCategory
         android:key="lockscreen_ui_customization"
