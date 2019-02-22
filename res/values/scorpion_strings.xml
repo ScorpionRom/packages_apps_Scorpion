@@ -60,7 +60,7 @@
     <string name="doze_title">Doze</string>
     <string name="recents_hide_title">Hide Apps</string>
     <string name="lockscreen_ui_title" >LockScreen UI</string>
-    <string name="misc_buttons_title">Misc. Buttons</string>
+    <string name="misc_buttons_title">Volume Buttons</string>
     <string name="nav_bar_title">Navigation bar</string>
     <string name="powermenu_category" >Power Menu</string>
     <string name="quck_settings_title" >Quick Settings</string>
